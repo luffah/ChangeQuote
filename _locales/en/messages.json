@@ -48,7 +48,7 @@
         "message": "Use in reply the same format (html or text) of the original mail"
     },
     "CQlabel5": {
-        "message": "Reply stripping off the inline attachments"
+        "message": "Reply stripping off the inline attachments (images)"
     },
     "CQlabel6": {
         "message": "Close message window after reply or forward"

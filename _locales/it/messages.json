@@ -48,7 +48,7 @@
         "message": "Usa nella risposta lo stesso formato (html o testo) dell'email originale"
     },
     "CQlabel5": {
-        "message": "Elimina gli allegati in linea dalle risposte"
+        "message": "Elimina gli allegati in linea (immagini) dalle risposte"
     },
     "CQlabel6": {
         "message": "Chiudi la finestra del messaggio dopo aver risposto o inoltrato"

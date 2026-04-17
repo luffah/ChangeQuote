@@ -48,7 +48,7 @@
         "message": "Utiliser le même format (html ou texte) pour la réponse que celui du mail d'origine"
     },
     "CQlabel5": {
-        "message": "Répondre en éliminant les fichiers incorporés"
+        "message": "Répondre en éliminant les fichiers (images) incorporés"
     },
     "CQlabel6": {
         "message": "Fermer la fenêtre du message après avoir répondu ou transféré"
