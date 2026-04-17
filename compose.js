@@ -178,7 +178,7 @@ async function updateMessage(composeDetails, messageHeader, messagePart) {
                 });
             if (inlineImgRemove) {
                 let elementImages = document.body.getElementsByTagName("img");
-                for (let i = 0; i < elementImages.length; i++) {
+                for (let i = elementImages.length-1 ; i >= 0; i--) {
                     let imgSrc = elementImages[i].getAttribute("src");
                     if (imgSrc.indexOf("http://") == -1 && imgSrc.indexOf("https://") == -1)
                         elementImages[i].remove();
