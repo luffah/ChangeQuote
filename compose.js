@@ -27,6 +27,25 @@ function findFormatEmail(messagePart) {
     return "auto"; 
 }
 
+
+function getElementsByXPath(xpath, root)
+{
+    let results = [];
+    let query = document.evaluate(xpath, root, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+    for (let i = 0, length = query.snapshotLength; i < length; ++i) {
+        results.push(query.snapshotItem(i));
+    }
+    return results;
+}
+
+function xpath_removal(expr, cond=null, root=null) {
+    let elems = getElementsByXPath(expr, root === null ? document.body: root)
+    for (let i = elems.length-1 ; i >= 0; i--) 
+        if (cond === null || cond(el))
+            elems[i].remove();
+}
+
+
 /**
  * Update the message reply
  */
@@ -186,28 +205,18 @@ async function updateMessage(composeDetails, messageHeader, messagePart) {
             }
             let oldReplyRemove = await getPrefInStorage("changequote.reply.without_old_replies.enable");
             if (oldReplyRemove) {
-
                 let oldReplyRemoveLevel = await getPrefInStorage("changequote.reply.without_old_replies.level");
-
-                var iterator = document.evaluate(
-                  "//blockquote".repeat(oldReplyRemoveLevel),
-                  document.body,
-                  null,
-                  XPathResult.ORDERED_NODE_ITERATOR_TYPE,
-                  null,
-                );
-
-                // NOTE : xpath iterator require try/catch
-                var elementQuote = iterator.iterateNext();
-
-                while (elementQuote) {
-                    elementQuote.remove();
-                    elementQuote = iterator.iterateNext();
-                }
-
+                xpath_removal("//blockquote".repeat(oldReplyRemoveLevel));
             }
 
-            // NOTE FOR SIGNATURE REMOVAL search <span class="gmail_signature_prefix">-- </span><div class="gmail_signature">
+            let signatureRemove = await getPrefInStorage("changequote.reply.without_signature_in_replies.enable");
+            if (signatureRemove) {
+                xpath_removal("//span[contains(@id, 'signature')]");
+                xpath_removal("//span[contains(@class, 'signature')]");
+                xpath_removal("//div[contains(@id, 'signature')]");
+                xpath_removal("//div[contains(@class, 'signature')]");
+                xpath_removal("//div[contains(@id, 'rc_sig')]");
+            }
 
 
             let markread_after_reply = await getPrefInStorage("changequote.message.markread_after_reply");

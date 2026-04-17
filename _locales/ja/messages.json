@@ -5,6 +5,9 @@
     "CQbold": {
         "message": "太字のヘッダタグにする"
     },
+    "CQlabel9": {
+        "message": "Reply stripping off signature"
+    },
     "CQbutton1": {
         "message": "編集"
     },

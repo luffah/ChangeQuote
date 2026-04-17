@@ -5,6 +5,9 @@
     "CQbold": {
         "message": "Näytä otsakkeiden tunnisteet lihavoituna"
     },
+    "CQlabel9": {
+        "message": "Reply stripping off signature"
+    },
     "CQbutton1": {
         "message": "Muokkaa"
     },

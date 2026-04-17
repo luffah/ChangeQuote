@@ -62,6 +62,9 @@
     "CQinfo8": {
         "message": "(HTML only)"
     },
+    "CQlabel9": {
+        "message": "Reply stripping off signature"
+    },
     "CQlabelitem1": {
         "message": "在HTML回复"
     },

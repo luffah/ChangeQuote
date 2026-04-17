@@ -5,6 +5,9 @@
     "CQbold": {
         "message": "Etichette delle intestazioni in grassetto"
     },
+    "CQlabel9": {
+        "message": "Reply stripping off signature"
+    },
     "CQbutton1": {
         "message": "Modifica"
     },
