@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "Po odpovedaní označiť správu za prečítanú"
     },
+    "CQlabel8": {
+        "message": "Reply stripping off old replies from level"
+    },
+    "CQinfo8": {
+        "message": "(HTML only)"
+    },
     "CQlabelitem1": {
         "message": "Odpovedať v HTML"
     },

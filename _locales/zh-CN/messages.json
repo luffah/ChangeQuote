@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "回复后标记为已读消息"
     },
+    "CQlabel8": {
+        "message": "Reply stripping off old replies from level"
+    },
+    "CQinfo8": {
+        "message": "(HTML only)"
+    },
     "CQlabelitem1": {
         "message": "在HTML回复"
     },

@@ -612,6 +612,8 @@ async function main() {
     await setDefaults("changequote.news.reply_header_separator", ", ");
     await setDefaults("changequote.news.reply_header_colon", ":\n");
     await setDefaults("changequote.reply.without_inline_images", false);
+    await setDefaults("changequote.reply.without_old_replies.enable", false);
+    await setDefaults("changequote.reply.without_old_replies.level", 2);
     await setDefaults("changequote.window.close_after_reply", false);
     await setDefaults("changequote.message.markread_after_reply", false);
     await setDefaults("changequote.headers.customized", "");

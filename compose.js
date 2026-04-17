@@ -184,6 +184,31 @@ async function updateMessage(composeDetails, messageHeader, messagePart) {
                         elementImages[i].remove();
                 }
             }
+            let oldReplyRemove = await getPrefInStorage("changequote.reply.without_old_replies.enable");
+            if (oldReplyRemove) {
+
+                let oldReplyRemoveLevel = await getPrefInStorage("changequote.reply.without_old_replies.level");
+
+                var iterator = document.evaluate(
+                  "//blockquote".repeat(oldReplyRemoveLevel),
+                  document.body,
+                  null,
+                  XPathResult.ORDERED_NODE_ITERATOR_TYPE,
+                  null,
+                );
+
+                // NOTE : xpath iterator require try/catch
+                var elementQuote = iterator.iterateNext();
+
+                while (elementQuote) {
+                    elementQuote.remove();
+                    elementQuote = iterator.iterateNext();
+                }
+
+            }
+
+            // NOTE FOR SIGNATURE REMOVAL search <span class="gmail_signature_prefix">-- </span><div class="gmail_signature">
+
 
             let markread_after_reply = await getPrefInStorage("changequote.message.markread_after_reply");
             if (markread_after_reply)

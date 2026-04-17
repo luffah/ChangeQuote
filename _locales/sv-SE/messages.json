@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "Märk meddelandet som läst när svaret skickats"
     },
+    "CQlabel8": {
+        "message": "Reply stripping off old replies from level"
+    },
+    "CQinfo8": {
+        "message": "(HTML only)"
+    },
     "CQlabelitem1": {
         "message": "Svara i HTML"
     },

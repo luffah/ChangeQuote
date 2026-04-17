@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "Marquer le message comme lu après avoir répondu"
     },
+    "CQlabel8": {
+        "message": "Répondre en éliminant les anciennes réponses à partir du niveau "
+    },
+    "CQinfo8": {
+        "message": "(seulement en édition HTML)"
+    },
     "CQbutton1": {
         "message": "Éditer"
     },

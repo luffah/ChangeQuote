@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "Пометить письмо как прочтенное после отправки"
     },
+    "CQlabel8": {
+        "message": "Reply stripping off old replies from level"
+    },
+    "CQinfo8": {
+        "message": "(HTML only)"
+    },
     "CQlabelitem1": {
         "message": "Ответ в формате HTML"
     },

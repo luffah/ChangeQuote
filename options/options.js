@@ -86,6 +86,12 @@ function checkboxcheck4() {
     else
         document.getElementById("CHbox-news").setAttribute("disabled", "true");
 }
+function checkboxcheck_stripping_old_replies() {
+    if (document.getElementById("replyStrippingOffOldReplies").checked)
+        document.getElementById("replyStrippingOffOldRepliesLevel").removeAttribute("disabled");
+    else
+        document.getElementById("replyStrippingOffOldRepliesLevel").setAttribute("disabled", "true");
+}
 
 // UI function to hide/show out option tabs.
 function tablistClickHandler(elem) {
@@ -139,6 +145,7 @@ async function loadPref(prefElement) {
             break;
     case "text":
     case "textarea":
+    case "number":
         prefElement.value = value;
         prefElement.addEventListener("change", () => savePref(prefElement));
         break;
@@ -157,6 +164,8 @@ async function savePref(prefElement) {
             checkboxcheck4();
         else if (prefElement.dataset.preference === "changequote.replyformat.enable")
             checkboxcheck3();
+        else if (prefElement.dataset.preference === "changequote.reply.without_old_replies.enable")
+            checkboxcheck_stripping_old_replies();
         break;
     case "radiogroup":
         let selectedElement = prefElement.querySelector(`input[type="radio"]:checked`)
@@ -176,6 +185,7 @@ async function savePref(prefElement) {
             break;
     case "text":
     case "textarea":
+    case "number":
         await setPrefInStorage(`${name}`, prefElement.value);
         break;
     }
@@ -191,6 +201,7 @@ async function loadOptions() {
     }
     InitCheckBox();
     checkboxcheck3();
+    checkboxcheck_stripping_old_replies();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -145,6 +145,14 @@
                             <label for="replyStrippingOffAttach">__MSG_CQlabel5__</label>
                         </div>
                         <div class="hbox">
+                            <input type="checkbox" id="replyStrippingOffOldReplies" data-preference="changequote.reply.without_old_replies.enable"/>
+                            <label for="replyStrippingOffOldReplies">__MSG_CQinfo8__ __MSG_CQlabel8__</label>
+                            <br>
+                            <div style="float:right">
+                                <input type="number" min="1" max="30" id="replyStrippingOffOldRepliesLevel" data-preference="changequote.reply.without_old_replies.level" />
+                            </div>
+                        </div>
+                        <div class="hbox">
                             <input type="checkbox" id="closeWindowsAfter" data-preference="changequote.window.close_after_reply" />
                             <label for="closeWindowsAfter">__MSG_CQlabel6__</label>
                         </div>

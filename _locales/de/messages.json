@@ -56,6 +56,12 @@
     "CQlabel7": {
         "message": "Nach dem Antworten die Mail als gelesen markieren"
     },
+    "CQlabel8": {
+        "message": "Reply stripping off old replies from level"
+    },
+    "CQinfo8": {
+        "message": "(HTML only)"
+    },
     "CQlabelitem1": {
         "message": "Antwort als HTML"
     },
